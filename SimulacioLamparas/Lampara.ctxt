@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Lampara
+comment1.params=
+comment1.target=Lampara()
+comment10.params=
+comment10.target=void\ desconectar()
+comment2.params=
+comment2.target=boolean\ getEstadoLampara()
+comment3.params=
+comment3.target=boolean\ getEstadoInterruptor()
+comment4.params=
+comment4.target=boolean\ getConexion()
+comment5.params=estadoLampara
+comment5.target=boolean\ setEstadoLampara(boolean)
+comment6.params=estadoInterruptor
+comment6.target=boolean\ setEstadoInterruptor(boolean)
+comment7.params=conexion
+comment7.target=boolean\ setEstadoConexion(boolean)
+comment8.params=
+comment8.target=boolean\ interruptorLampara()
+comment9.params=
+comment9.target=void\ conectar()
+numComments=11
