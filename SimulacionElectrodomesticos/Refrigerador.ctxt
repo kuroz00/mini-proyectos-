@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Refrigerador
+comment1.params=consumoElectrico
+comment1.target=Refrigerador(int)
+comment2.params=
+comment2.target=boolean\ getEstadoElectrodomestico()
+comment3.params=
+comment3.target=boolean\ getConexion()
+comment4.params=
+comment4.target=int\ getConsumoElectrico()
+comment5.params=
+comment5.target=boolean\ setEstadoElectrodomestico()
+comment6.params=
+comment6.target=boolean\ setConexion()
+comment7.params=
+comment7.target=int\ setConsumoElectrico()
+numComments=8
