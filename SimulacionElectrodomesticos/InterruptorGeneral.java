@@ -72,29 +72,20 @@ public class InterruptorGeneral {
         }                                                                                         
         for(Electrodomestico electrodomestico : electrodomesticosConectados){ 
             if (electrodomestico.conexion == true){
-                if((getEstadoInterruptorGeneral() == true) && (electrodomestico.getEstadoInterruptor() == true) && (electrodomestico.nombre == "lampara")){
+                if((getEstadoInterruptorGeneral() == true) && (electrodomestico.getEstadoInterruptor() == true) && (electrodomestico.nombre != "refrigerador")){
                     electrodomestico.setEstadoElectrodomestico(true);
                     consumo_electrico += electrodomestico.consumoElectrico;
                 } 
-                else if ((getEstadoInterruptorGeneral() == true) && (electrodomestico.nombre != "lampara")){
+                else if ((getEstadoInterruptorGeneral() == true) && (electrodomestico.nombre == "refrigerador")){
                     electrodomestico.setEstadoElectrodomestico(true);
                     consumo_electrico += electrodomestico.consumoElectrico;
                 } else if (getEstadoInterruptorGeneral() == false){
                     consumo_electrico = 0;
+                    electrodomestico.setEstadoElectrodomestico(false);
                 }
                 
             } 
-            /*else if (electrodomestico.conexion == false){
-                if((getEstadoInterruptorGeneral() == true) && (electrodomestico.getEstadoInterruptor() == true) && (electrodomestico.nombre == "lampara")){
-                    electrodomestico.setEstadoElectrodomestico(false);
-                } 
-                else if ((getEstadoInterruptorGeneral() == true) && (electrodomestico.nombre != "lampara")){
-                    electrodomestico.setEstadoElectrodomestico(true);
-                }else {                                                                              
-                    electrodomestico.setEstadoElectrodomestico(false);
-                    consumo_electrico -= electrodomestico.consumoElectrico;
-                }
-            }*/
+
         }
         return estadoInterruptorGeneral;                                                           
     }                                                                                               
