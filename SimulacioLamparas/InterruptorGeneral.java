@@ -16,7 +16,7 @@ public class InterruptorGeneral {
         return IG;
     }
 
-    
+
     
     //metodos del interruptor general
     //GET --> Acceder al valor de un atributo
