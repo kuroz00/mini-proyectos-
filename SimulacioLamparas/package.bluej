@@ -1,14 +1,14 @@
 #BlueJ package file
-dependency1.from=Lampara
-dependency1.to=InterruptorGeneral
+dependency1.from=InterruptorGeneral
+dependency1.to=Lampara
 dependency1.type=UsesDependency
-dependency2.from=InterruptorGeneral
-dependency2.to=Lampara
+dependency2.from=Lampara
+dependency2.to=InterruptorGeneral
 dependency2.type=UsesDependency
-editor.fx.0.height=840
-editor.fx.0.width=1139
-editor.fx.0.x=403
-editor.fx.0.y=0
+editor.fx.0.height=848
+editor.fx.0.width=1550
+editor.fx.0.x=-7
+editor.fx.0.y=-7
 objectbench.height=111
 objectbench.width=569
 package.divider.horizontal=0.6
