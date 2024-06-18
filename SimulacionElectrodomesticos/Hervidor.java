@@ -33,8 +33,7 @@ private float cantidadAgua;
     public boolean setEstadoHervidor(boolean estadoElectrodomestico) {
         return this.estadoElectrodomestico = estadoElectrodomestico;
     }
-
-    
+    //Atributos propios de la clase
         public float setCapacidadMaximaLts(){
         return this.capacidadMaximaLts = capacidadMaximaLts;
     }

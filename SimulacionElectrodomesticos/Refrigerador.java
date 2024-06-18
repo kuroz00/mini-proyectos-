@@ -1,6 +1,8 @@
+import java.util.ArrayList; 
 public class Refrigerador extends Electrodomestico{
     //Atributos
-    private static int capacidadItems = 40;
+    private static int capacidadItems = 20;
+    private ArrayList<Refrigerador> refrigerador = new ArrayList<>(); //Guardar items aqui, establecer el maximo y ademas una var de temperatura interna.
 
     //Metodos 
     //Instancia del singleton
@@ -34,4 +36,6 @@ public class Refrigerador extends Electrodomestico{
     public int setConsumoElectrico(){
         return consumoElectrico;
     }
+    
+     //Atributos propios de la clase
 }

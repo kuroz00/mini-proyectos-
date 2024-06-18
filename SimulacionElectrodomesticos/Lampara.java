@@ -16,21 +16,23 @@ public class Lampara extends Electrodomestico {
     
     
     //Metodos de la lampara
-    //GET --> ACCEDER al valor de un atributo
+    //GET --> 
     public boolean getEstadoLampara() {
         return estadoElectrodomestico;
     }
     public boolean getEstadoInterruptor() {
         return estadoInterruptor;
     }
-    //SET --> MODIFICAR el valor de un atributo
+    //SET --> 
     public boolean setEstadoLampara(boolean estadoLampara) {
         return this.estadoElectrodomestico = estadoLampara;
     }
     public boolean setEstadoInterruptor(boolean estadoInterruptor) {
         return this.estadoInterruptor = estadoInterruptor;
     }
-
+    
+    //Atributos propios de la clase
+    
     
      //Interruptor de la lampara                                
     public boolean interruptorLampara() {                       

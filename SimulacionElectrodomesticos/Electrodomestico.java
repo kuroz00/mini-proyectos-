@@ -48,12 +48,10 @@ public abstract class Electrodomestico {
         if (conexion == false){                                                                    
             obj.registrar(this);                                                                    
             conexion = true;                                                                        
-            if((obj.getEstadoInterruptorGeneral() == true) && ((this.nombre != "lampara") 
-            && (this.nombre != "hervidor"))){
+            if((obj.getEstadoInterruptorGeneral() == true) && (this.nombre == "refrigerador")){
                 obj.setConsumoElectrico(obj.getConsumoElectrico() + this.consumoElectrico);
                 setEstadoElectrodomestico(true);
-            } else if ((obj.getEstadoInterruptorGeneral() == true) 
-            && (getEstadoInterruptor() == true)){
+            } else if ((obj.getEstadoInterruptorGeneral() == true) && (getEstadoInterruptor() == true)){
                 obj.setConsumoElectrico(obj.getConsumoElectrico() + this.consumoElectrico);
                 setEstadoElectrodomestico(true);
             }
@@ -64,13 +62,10 @@ public abstract class Electrodomestico {
         if (conexion == true){     
             obj.remover(this);
             conexion = false;
-            
-        if((obj.getEstadoInterruptorGeneral() == true) && ((this.nombre != "lampara") 
-            && (this.nombre != "hervidor"))){
+        if((obj.getEstadoInterruptorGeneral() == true) && ((this.nombre == "refrigerador"))){
                 obj.setConsumoElectrico(obj.getConsumoElectrico() - this.consumoElectrico);
                 setEstadoElectrodomestico(false);        
-            } else if ((obj.getEstadoInterruptorGeneral() == true) 
-            && (getEstadoInterruptor() == true)){
+            } else if ((obj.getEstadoInterruptorGeneral() == true) && (getEstadoInterruptor() == true)){
                 obj.setConsumoElectrico(obj.getConsumoElectrico() - this.consumoElectrico);
                 setEstadoElectrodomestico(false);
             }

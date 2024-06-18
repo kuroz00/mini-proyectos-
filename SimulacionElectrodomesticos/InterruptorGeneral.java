@@ -10,6 +10,7 @@ public class InterruptorGeneral {
     private static int consumo_electrico;
     
     
+    
     //Se construye el Singleton devolviendo su propia referencia
     public InterruptorGeneral getSingleton() {
         return IG;
@@ -17,8 +18,9 @@ public class InterruptorGeneral {
 
     
     
+    
     //metodos del interruptor general
-    //GET --> Acceder al valor de un atributo
+    //GET --> 
     public static int getContador() {
         return contador_electrodomesticos;
     }
@@ -28,8 +30,7 @@ public class InterruptorGeneral {
     public static int getConsumoElectrico(){
         return consumo_electrico;
     }
-    
-    //SET --> Modificar el valor de un atributo
+    //SET --> 
     public static void setContador_electrodomesticos(int contador) { 
         InterruptorGeneral.contador_electrodomesticos = contador;
     }
@@ -43,24 +44,16 @@ public class InterruptorGeneral {
     
     
     
-    //Array electrodomesticos -->                                                                                       
+    //Metodos para modificar el Array-->                                                                                       
     public static void registrar(Electrodomestico electrodomestico) {   
-        /*if(electrodomestico.nombre != "lampara"){
-            consumo_electrico += electrodomestico.consumoElectrico;
-        }*/
         electrodomesticosConectados.add(electrodomestico);                                     
         contador_electrodomesticos = electrodomesticosConectados.size();                             
     }      
-    public static void remover(Electrodomestico electrodomestico){
-        /*if(electrodomestico.nombre != "lampara"){
-            consumo_electrico -= electrodomestico.consumoElectrico;
-        }*/            
+    public static void remover(Electrodomestico electrodomestico){           
         electrodomesticosConectados.remove(electrodomestico);                                                 
         contador_electrodomesticos = electrodomesticosConectados.size();                                      
     }  
-    public static ArrayList obtenerArreglo(){
-        return electrodomesticosConectados;
-    }   
+
     
     
     //Interruptor que enciendo o apaga el IG -->
@@ -72,29 +65,17 @@ public class InterruptorGeneral {
         }                                                                                         
         for(Electrodomestico electrodomestico : electrodomesticosConectados){ 
             if (electrodomestico.conexion == true){
-                if((getEstadoInterruptorGeneral() == true) && (electrodomestico.getEstadoInterruptor() == true) && (electrodomestico.nombre == "lampara")){
+                if((getEstadoInterruptorGeneral() == true) && (electrodomestico.getEstadoInterruptor() == true) /*&& (electrodomestico.nombre == "lampara") || (electrodomestico.nombre == "hervidor")*/){
                     electrodomestico.setEstadoElectrodomestico(true);
                     consumo_electrico += electrodomestico.consumoElectrico;
-                } 
-                else if ((getEstadoInterruptorGeneral() == true) && (electrodomestico.nombre != "lampara")){
+                }else if ((getEstadoInterruptorGeneral() == true) && (electrodomestico.nombre == "refrigerador")){
                     electrodomestico.setEstadoElectrodomestico(true);
                     consumo_electrico += electrodomestico.consumoElectrico;
-                } else if (getEstadoInterruptorGeneral() == false){
+                }else if (getEstadoInterruptorGeneral() == false){
                     consumo_electrico = 0;
+                    electrodomestico.setEstadoElectrodomestico(false);
                 }
-                
             } 
-            /*else if (electrodomestico.conexion == false){
-                if((getEstadoInterruptorGeneral() == true) && (electrodomestico.getEstadoInterruptor() == true) && (electrodomestico.nombre == "lampara")){
-                    electrodomestico.setEstadoElectrodomestico(false);
-                } 
-                else if ((getEstadoInterruptorGeneral() == true) && (electrodomestico.nombre != "lampara")){
-                    electrodomestico.setEstadoElectrodomestico(true);
-                }else {                                                                              
-                    electrodomestico.setEstadoElectrodomestico(false);
-                    consumo_electrico -= electrodomestico.consumoElectrico;
-                }
-            }*/
         }
         return estadoInterruptorGeneral;                                                           
     }                                                                                               
