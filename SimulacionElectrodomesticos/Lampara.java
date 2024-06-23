@@ -14,8 +14,7 @@ public class Lampara extends Electrodomestico {
     }
     
     
-    
-    //Metodos de la lampara
+    /*
     //GET --> 
     public boolean getEstadoLampara() {
         return estadoElectrodomestico;
@@ -34,7 +33,8 @@ public class Lampara extends Electrodomestico {
     //Atributos propios de la clase
     
     
-     //Interruptor de la lampara                                
+     //Interruptor de la lampara   
+     
     public boolean interruptorLampara() {                       
         if (conexion == true){                                 
             if (getEstadoInterruptor() == true){               
@@ -63,6 +63,6 @@ public class Lampara extends Electrodomestico {
                 return getEstadoInterruptor();                     
             }                                                   
         }                                                       
-    }                                                           
+    }                */                                           
     
 }

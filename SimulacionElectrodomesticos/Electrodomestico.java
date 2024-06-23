@@ -71,6 +71,36 @@ public abstract class Electrodomestico {
             }
         }
     }     
+    
+    public boolean INTERRUPTOR_ELECTRODOMESTICO(){
+         if (conexion == true){                                 
+            if (getEstadoInterruptor() == true){                
+                setEstadoInterruptor(false);
+                if (obj.getEstadoInterruptorGeneral() == true ){
+                    obj.setConsumoElectrico(obj.getConsumoElectrico() - consumoElectrico);
+                }
+                return setEstadoElectrodomestico(false);                
+            } else {                                            
+                setEstadoInterruptor(true);                    
+                if (obj.getEstadoInterruptorGeneral() == true){ 
+                    obj.setConsumoElectrico(obj.getConsumoElectrico() + consumoElectrico);
+                    return setEstadoElectrodomestico(true);             
+                }                                               
+                return getEstadoInterruptor();                     
+            }                                                         
+        } else {                                              
+            if (getEstadoInterruptor() == true){               
+                setEstadoInterruptor(false);                  
+                return setEstadoElectrodomestico(false);                
+            } else {                                           
+                setEstadoInterruptor(true);                   
+                if (obj.getEstadoInterruptorGeneral() == true){ 
+                    return setEstadoElectrodomestico(false);            
+                }                                                               
+                return getEstadoInterruptor();                     
+            }                                                   
+        }
+    }
         
 }      
                                                   

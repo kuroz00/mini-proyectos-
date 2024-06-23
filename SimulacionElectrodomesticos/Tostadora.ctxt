@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.target=Lampara
+comment0.target=Tostadora
 comment1.params=consumoElectrico
-comment1.target=Lampara(int)
+comment1.target=Tostadora(int)
 numComments=2

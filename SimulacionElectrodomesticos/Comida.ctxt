@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Comida
+comment1.params=
+comment1.target=Comida()
+comment10.params=
+comment10.target=void\ guardarEnRefri()
+comment11.params=
+comment11.target=void\ quitarDelRefri()
+comment2.params=
+comment2.target=java.lang.String\ getNombre()
+comment3.params=
+comment3.target=java.lang.String\ getPeso()
+comment4.params=
+comment4.target=java.lang.String\ getColor()
+comment5.params=
+comment5.target=java.lang.Float\ getPrecio()
+comment6.params=nombre
+comment6.target=java.lang.String\ setNombre(java.lang.String)
+comment7.params=peso
+comment7.target=java.lang.String\ setPeso(java.lang.String)
+comment8.params=color
+comment8.target=java.lang.String\ setColor(java.lang.String)
+comment9.params=precio
+comment9.target=java.lang.Float\ setPrecio(java.lang.Float)
+numComments=12

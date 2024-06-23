@@ -43,7 +43,7 @@ private float cantidadAgua;
     
     
     
-    public boolean interruptorHervidor() {                       //BUG! al apagarlo sigue encendido y consumiendo electricidad.
+    /*public boolean interruptorHervidor() {                       //BUG! al apagarlo sigue encendido y consumiendo electricidad.
         if (conexion == true){                                 
             if (getEstadoInterruptor() == true){                
                 setEstadoInterruptor(false);
@@ -71,6 +71,6 @@ private float cantidadAgua;
                 return getEstadoInterruptor();                     
             }                                                   
         }
-    }
+    }*/
 
 }

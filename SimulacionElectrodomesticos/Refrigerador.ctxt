@@ -1,17 +1,14 @@
 #BlueJ class context
 comment0.target=Refrigerador
-comment1.params=consumoElectrico
-comment1.target=Refrigerador(int)
+comment1.params=
+comment1.target=Refrigerador()
 comment2.params=
-comment2.target=boolean\ getEstadoElectrodomestico()
+comment2.target=Refrigerador\ getRefri()
 comment3.params=
-comment3.target=boolean\ getConexion()
-comment4.params=
-comment4.target=int\ getConsumoElectrico()
-comment5.params=
-comment5.target=boolean\ setEstadoElectrodomestico()
-comment6.params=
-comment6.target=boolean\ setConexion()
-comment7.params=
-comment7.target=int\ setConsumoElectrico()
-numComments=8
+comment3.target=int\ getCapacidadItems()
+comment3.text=\r\n\ \ \ \ //GET\ -->\ ACCEDER\ al\ valor\ de\ un\ atributo\r\n\ \ \ \ public\ boolean\ getEstadoElectrodomestico()\ {\r\n\ \ \ \ \ \ \ \ return\ estadoElectrodomestico;\r\n\ \ \ \ }\r\n\ \ \ \ public\ boolean\ getConexion(){\r\n\ \ \ \ \ \ \ \ return\ conexion;\r\n\ \ \ \ }\r\n\ \ \ \ public\ int\ getConsumoElectrico(){\r\n\ \ \ \ \ \ \ \ return\ consumoElectrico;\r\n\ \ \ \ }\r\n\ \ \ \ //SET\ -->\ MODIFICAR\ el\ valor\ de\ un\ atributo\r\n\ \ \ \ public\ boolean\ setEstadoElectrodomestico()\ {\r\n\ \ \ \ \ \ \ \ return\ estadoElectrodomestico;\r\n\ \ \ \ }\r\n\ \ \ \ public\ boolean\ setConexion(){\r\n\ \ \ \ \ \ \ \ return\ conexion;\r\n\ \ \ \ }\r\n\ \ \ \ public\ int\ setConsumoElectrico(){\r\n\ \ \ \ \ \ \ \ return\ consumoElectrico;\r\n\ \ \ \ }\r\n
+comment4.params=comida
+comment4.target=void\ guardar(Comida)
+comment5.params=comida
+comment5.target=void\ sacar(Comida)
+numComments=6
