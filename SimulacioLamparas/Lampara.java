@@ -42,27 +42,25 @@ public class Lampara {
     public boolean interruptorLampara() {                       //
         if (conexion == true){                                  // <--SI la lampara esta conectada...
             if (getEstadoInterruptor() == true){                //      SI el interruptor de la lampara esta encendido...
-                setEstadoInterruptor(false);                    //          apagarlo.
-            //    obj.setLamparas_encendidas(obj.getLamparas_encendidas() -1);
-                return setEstadoLampara(false);                 //          y retornar el valor apagado.
+                setEstadoLampara(false);                    //          apagarlo.
+                return setEstadoInterruptor(false);                 //          y retornar el valor apagado.
             } else {                                            //      SI NO ...
                 setEstadoInterruptor(true);                     //          encenderlo.
                 if (obj.getEstadoInterruptorGeneral() == true){ //          SI el interruptor general esta encendido tambien,
-            //        obj.setLamparas_encendidas(obj.getLamparas_encendidas() +1);
                     return setEstadoLampara(true);              //              Encender la lampara.
                 }                                               //                  ...
-                return getEstadoLampara();                      //          retornar estado de la lampara.
+                return getEstadoInterruptor();                      //          retornar estado de la lampara.
             }                                                   //          .
         } else {                                                // <-- SI la lampara NO esta conectada...
             if (getEstadoInterruptor() == true){                //       SI el interruptor de la lampara esta encendido... 
-                setEstadoInterruptor(false);                    //          apagarlo...
-                return setEstadoLampara(false);                 //          y retornar el valor apagado.
+                setEstadoLampara(false);                    //          apagarlo...
+                return setEstadoInterruptor(false);                 //          y retornar el valor apagado.
             } else {                                            //      SI NO ...
                 setEstadoInterruptor(true);                     //          encenderlo
                 if (obj.getEstadoInterruptorGeneral() == true){ //          SI el interruptor general esta encendido tambien,
                     return setEstadoLampara(false);             //              Apagar la lampara.
                 }                                               //                  ...
-                return getEstadoLampara();                      //          retornar estado de la lampara.
+                return getEstadoInterruptor();                      //          retornar estado de la lampara.
             }                                                   //
         }                                                       //
     }                                                           //
