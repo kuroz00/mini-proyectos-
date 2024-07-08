@@ -2,4 +2,8 @@
 comment0.target=Lampara
 comment1.params=consumoElectrico
 comment1.target=Lampara(int)
-numComments=2
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Lampara.\r\n\ Inicializa\ el\ consumo\ electrico\ y\ el\ nombre\ de\ la\ lampara.\r\n\ \r\n\ @param\ consumoElectrico\ El\ consumo\ electrico\ de\ la\ lampara\ en\ vatios.\r\n
+comment2.params=
+comment2.target=java.lang.String\ cambiarColor()
+comment2.text=\r\n\ Cambia\ el\ color\ de\ la\ lampara\ entre\ rojo\ y\ verde.\r\n\ \r\n\ @return\ El\ nuevo\ color\ de\ la\ lampara.\r\n
+numComments=3

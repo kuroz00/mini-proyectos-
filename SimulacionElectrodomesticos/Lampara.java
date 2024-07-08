@@ -1,68 +1,35 @@
 public class Lampara extends Electrodomestico { 
     //Instancia y atributos
- 
+    private String color = "rojo";
     
     //Instancia del singleton
     private InterruptorGeneral obj;
+    /**
+     * Constructor de la clase Lampara.
+     * Inicializa el consumo electrico y el nombre de la lampara.
+     * 
+     * @param consumoElectrico El consumo electrico de la lampara en vatios.
+     */
     public Lampara(int consumoElectrico) {
         super(); //ESTUDIAR FUNCIONAMIENTO Y LOGICA. <-- 
         this.consumoElectrico = consumoElectrico;
         this.nombre = "lampara";
         
         InterruptorGeneral x = new InterruptorGeneral();
-        obj = x.getSingleton();
+        obj = x.getSingleton();//
     }
     
-    
-    /*
-    //GET --> 
-    public boolean getEstadoLampara() {
-        return estadoElectrodomestico;
+    /**
+     * Cambia el color de la lampara entre rojo y verde.
+     * 
+     * @return El nuevo color de la lampara.
+     */
+    public String cambiarColor(){
+        if (color == "rojo"){
+            color = "verde";
+        } else {
+            color = "rojo";
+        }
+        return  color;
     }
-    public boolean getEstadoInterruptor() {
-        return estadoInterruptor;
-    }
-    //SET --> 
-    public boolean setEstadoLampara(boolean estadoLampara) {
-        return this.estadoElectrodomestico = estadoLampara;
-    }
-    public boolean setEstadoInterruptor(boolean estadoInterruptor) {
-        return this.estadoInterruptor = estadoInterruptor;
-    }
-    
-    //Atributos propios de la clase
-    
-    
-     //Interruptor de la lampara   
-     
-    public boolean interruptorLampara() {                       
-        if (conexion == true){                                 
-            if (getEstadoInterruptor() == true){               
-                setEstadoInterruptor(false);
-                if (obj.getEstadoInterruptorGeneral() == true ){
-                    obj.setConsumoElectrico(obj.getConsumoElectrico() - consumoElectrico);
-                }
-                return setEstadoLampara(false);                         
-            } else {                                                
-                setEstadoInterruptor(true);                               
-                if (obj.getEstadoInterruptorGeneral() == true){     
-                    obj.setConsumoElectrico(obj.getConsumoElectrico() + consumoElectrico);
-                    return setEstadoLampara(true);                        
-                }                                                               
-                return getEstadoInterruptor();                             
-            }                                                           
-        } else {                                              
-            if (getEstadoInterruptor() == true){                
-                setEstadoInterruptor(false);                    
-                return setEstadoLampara(false);                 
-            } else {                                          
-                setEstadoInterruptor(true);                     
-                if (obj.getEstadoInterruptorGeneral() == true){ 
-                    return setEstadoLampara(false);            
-                }                                               
-                return getEstadoInterruptor();                     
-            }                                                   
-        }                                                       
-    }                */                                           
-    
 }

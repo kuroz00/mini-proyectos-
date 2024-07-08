@@ -1,4 +1,6 @@
-
+/**
+ * Clase abstracta Comida que define las propiedades basicas de una comida.
+ */
 public abstract class Comida{
     //atributos
     protected String nombre;
@@ -8,8 +10,14 @@ public abstract class Comida{
     protected boolean almacenado = false;
     
     
-    //metodos
+    /**
+     * Instancia del singleton Refrigerador.
+     */
     private Refrigerador objRefri;
+    /**
+     * Constructor de la clase Comida.
+     * Inicializa la referencia al refrigerador.
+     */
     public Comida() {       
         Refrigerador x = new Refrigerador();
         objRefri = x.getRefri();
@@ -43,13 +51,18 @@ public abstract class Comida{
     }
     
     
-    //metodos del arreglo del refri.
+    /**
+     * Guarda el item de comida en el refrigerador si no esta almacenado.
+     */
     public void guardarEnRefri(){
         if(almacenado != true){
             objRefri.guardar(this);
             almacenado = true;
         }
     }
+    /**
+     * Quita el item de comida del refrigerador si esta almacenado.
+     */
     public void quitarDelRefri(){
         if(almacenado == true){
             objRefri.sacar(this);

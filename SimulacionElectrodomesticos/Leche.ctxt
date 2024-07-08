@@ -2,6 +2,8 @@
 comment0.target=Leche
 comment1.params=
 comment1.target=Leche()
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Leche.\r\n\ Inicializa\ los\ atributos\ de\ la\ leche.\r\n
 comment2.params=
 comment2.target=java.lang.String\ beber()
+comment2.text=\r\n\ Metodo\ que\ simula\ el\ acto\ de\ beber\ leche,\ disminuyendo\ la\ cantidad\ restante\ y\ actualizando\ el\ peso.\r\n\ \r\n\ @return\ El\ peso\ actual\ de\ la\ leche\ despues\ de\ beber.\r\n
 numComments=3

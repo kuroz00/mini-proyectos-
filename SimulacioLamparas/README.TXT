@@ -61,3 +61,5 @@ Funcionamiento básico:
 Objetivo del Programa:
 - Simular el funcionamiento de lámparas conectadas a un interruptor general dentro de una casa. Esto incluye manejar la conexión y desconexión de lámparas, así como el encendido y apagado controlado por los interruptores.
 
+
+***GUIA PARA EL USUARIO************************

@@ -1,6 +1,10 @@
 public class Manzana extends Comida{
     //atributos
     private String estado = "intacta";
+    /**
+     * Constructor de la clase Manzana.
+     * Inicializa las propiedades heredadas de la clase Comida y establece las propiedades específicas de la manzana.
+     */
     public Manzana(){
         super();
         this.nombre = "manzana";
@@ -8,7 +12,12 @@ public class Manzana extends Comida{
         this.peso = "200 Grs";
         this.precio = 300.0f;
     }
-    //metodos
+    /**
+     * Método para simular morder la manzana, cambiando su estado y peso.
+     * Dependiendo del estado actual de la manzana, cambia su estado y reduce su peso.
+     *
+     * @return El estado actual de la manzana después de ser mordida.
+     */
     public String morder(){
         switch (estado){
             case "intacta":

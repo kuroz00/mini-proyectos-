@@ -5,7 +5,10 @@ public class Pollo extends Comida{
     String estado = "entero";
     
     
-    //instancia y singleton; 
+    /**
+     * Constructor de la clase Pollo.
+     * Inicializa las propiedades heredadas de la clase Comida y establece las propiedades específicas del pollo.
+     */
     public Pollo(){
         super();
         this.nombre = "pollo"; 
@@ -14,7 +17,12 @@ public class Pollo extends Comida{
     }
     
     
-    //metodos
+
+    /**
+     * Cocina el pollo cambiando su estado de cocción de crudo a cocido.
+     *
+     * @return El estado de cocción actual del pollo después de ser cocinado (cocido).
+     */
     public String cocinar(){
         return coccion = "cocido";
     }

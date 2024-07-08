@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Pan
+comment1.params=
+comment1.target=Pan()
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Pan.\r\n\ Inicializa\ las\ propiedades\ heredadas\ de\ la\ clase\ Comida\ y\ establece\ las\ propiedades\ espec\u00EDficas\ del\ pan.\r\n
+comment2.params=
+comment2.target=boolean\ getTostado()
+comment3.params=tostado
+comment3.target=void\ setTostado(boolean)
+comment4.params=
+comment4.target=java.lang.String\ getEstado()
+comment5.params=estado
+comment5.target=void\ setEstado(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ morder()
+comment6.text=\r\n\ Metodo\ para\ simular\ morder\ el\ pan,\ cambiando\ su\ estado.\r\n\ Dependiendo\ del\ estado\ actual\ del\ pan,\ cambia\ su\ estado\ interno\ al\ ser\ mordido.\r\n\r\n\ @return\ El\ estado\ actual\ del\ pan\ despu\u00E9s\ de\ ser\ mordido.\r\n
+numComments=7

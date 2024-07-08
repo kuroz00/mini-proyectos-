@@ -2,13 +2,16 @@
 comment0.target=Refrigerador
 comment1.params=
 comment1.target=Refrigerador()
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Refrigerador.\r\n\ Inicializa\ el\ consumo\ electrico\ y\ el\ nombre\ del\ refrigerador.\r\n
 comment2.params=
 comment2.target=Refrigerador\ getRefri()
+comment2.text=\r\n\ Obtiene\ la\ instancia\ del\ singleton\ Refrigerador.\r\n\ \r\n\ @return\ La\ instancia\ del\ refrigerador.\r\n
 comment3.params=
 comment3.target=int\ getCapacidadItems()
-comment3.text=\r\n\ \ \ \ //GET\ -->\ ACCEDER\ al\ valor\ de\ un\ atributo\r\n\ \ \ \ public\ boolean\ getEstadoElectrodomestico()\ {\r\n\ \ \ \ \ \ \ \ return\ estadoElectrodomestico;\r\n\ \ \ \ }\r\n\ \ \ \ public\ boolean\ getConexion(){\r\n\ \ \ \ \ \ \ \ return\ conexion;\r\n\ \ \ \ }\r\n\ \ \ \ public\ int\ getConsumoElectrico(){\r\n\ \ \ \ \ \ \ \ return\ consumoElectrico;\r\n\ \ \ \ }\r\n\ \ \ \ //SET\ -->\ MODIFICAR\ el\ valor\ de\ un\ atributo\r\n\ \ \ \ public\ boolean\ setEstadoElectrodomestico()\ {\r\n\ \ \ \ \ \ \ \ return\ estadoElectrodomestico;\r\n\ \ \ \ }\r\n\ \ \ \ public\ boolean\ setConexion(){\r\n\ \ \ \ \ \ \ \ return\ conexion;\r\n\ \ \ \ }\r\n\ \ \ \ public\ int\ setConsumoElectrico(){\r\n\ \ \ \ \ \ \ \ return\ consumoElectrico;\r\n\ \ \ \ }\r\n
 comment4.params=comida
 comment4.target=void\ guardar(Comida)
+comment4.text=\r\n\ Guarda\ un\ item\ de\ comida\ en\ el\ refrigerador\ si\ hay\ espacio\ disponible.\r\n\ \r\n\ @param\ comida\ El\ item\ de\ comida\ a\ ser\ guardado\ en\ el\ refrigerador.\r\n
 comment5.params=comida
 comment5.target=void\ sacar(Comida)
+comment5.text=\r\n\ Saca\ un\ item\ de\ comida\ del\ refrigerador\ si\ hay\ items\ presentes.\r\n\ \r\n\ @param\ comida\ El\ item\ de\ comida\ a\ ser\ sacado\ del\ refrigerador.\r\n
 numComments=6

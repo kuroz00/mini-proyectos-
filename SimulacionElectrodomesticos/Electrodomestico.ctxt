@@ -1,13 +1,17 @@
 #BlueJ class context
 comment0.target=Electrodomestico
+comment0.text=\r\n\ La\ clase\ abstracta\ Electrodomestico\ define\ las\ propiedades\ y\ comportamientos\ comunes\ de\ todos\ los\ electrodomesticos.\r\n\ Incluye\ metodos\ para\ conectar,\ desconectar\ y\ cambiar\ el\ estado\ del\ interruptor\ de\ los\ electrodomesticos.\r\n
 comment1.params=
 comment1.target=Electrodomestico()
 comment10.params=
 comment10.target=void\ conectar()
+comment10.text=\r\n\ Conecta\ el\ electrodomestico\ al\ interruptor\ general.\r\n\ Si\ el\ interruptor\ general\ est\u00E1\ cerrado,\ el\ electrodomestico\ se\ enciende\ y\ su\ consumo\ el\u00E9ctrico\ se\ suma\ al\ total.\r\n
 comment11.params=
 comment11.target=void\ desconectar()
+comment11.text=\r\n\ Desconecta\ el\ electrodom\u00E9stico\ del\ interruptor\ general.\r\n\ Si\ el\ interruptor\ general\ est\u00E1\ abierto,\ el\ consumo\ electrico\ del\ electrodomestico\ se\ resta\ del\ total\ y\ el\ electrodomestico\ se\ apaga.\r\n
 comment12.params=
-comment12.target=boolean\ INTERRUPTOR_ELECTRODOMESTICO()
+comment12.target=boolean\ a_interruptorElectrodomestico()
+comment12.text=\r\n\ Cambia\ el\ estado\ del\ interruptor\ del\ electrodomestico.\r\n\ Si\ el\ electrodom\u00E9stico\ est\u00E1\ conectado\ y\ el\ interruptor\ general\ est\u00E1\ cerrado,\ el\ consumo\ el\u00E9ctrico\ se\ actualiza\ en\ base\ a\ la\ condicional\ correspondiente.\r\n\ \r\n\ @return\ El\ nuevo\ estado\ del\ interruptor\ del\ electrodom\u00E9stico.\r\n
 comment2.params=
 comment2.target=boolean\ getConexion()
 comment3.params=

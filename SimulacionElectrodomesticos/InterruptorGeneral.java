@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 import java.util.*;
+/**
+ * La clase InterruptorGeneral controla el estado general de los electrodomésticos conectados.
+ * Implementa el patrón Singleton para asegurar que solo haya una instancia del interruptor general.
+ */
 public class InterruptorGeneral {
-    // instancias y atributos
+    //Atributos e instancias.
     private static InterruptorGeneral IG = new InterruptorGeneral();
     private static ArrayList<Electrodomestico> electrodomesticosConectados = new ArrayList<>();
     
@@ -10,17 +14,18 @@ public class InterruptorGeneral {
     private static int consumo_electrico;
     
     
-    
-    //Se construye el Singleton devolviendo su propia referencia
+    /**
+     * Devuelve la instancia única del interruptor general (Singleton).
+     * 
+     * @return La instancia única de InterruptorGeneral.
+     */
     public InterruptorGeneral getSingleton() {
         return IG;
     }
 
     
+
     
-    
-    //metodos del interruptor general
-    //GET --> 
     public static int getContador() {
         return contador_electrodomesticos;
     }
@@ -44,18 +49,33 @@ public class InterruptorGeneral {
     
     
     
-    //Metodos para modificar el Array-->                                                                                       
+    //Metodos para modificar el Array-->  
+    /**
+     * Registra un nuevo electrodoméstico en la lista de electrodomésticos conectados.
+     * 
+     * @param electrodomestico El electrodoméstico que se va a registrar.
+     */
     public static void registrar(Electrodomestico electrodomestico) {   
         electrodomesticosConectados.add(electrodomestico);                                     
         contador_electrodomesticos = electrodomesticosConectados.size();                             
     }      
+    
+    /**
+     * Remueve un electrodoméstico de la lista de electrodomésticos conectados.
+     * 
+     * @param electrodomestico El electrodoméstico que se va a remover.
+     */
     public static void remover(Electrodomestico electrodomestico){           
         electrodomesticosConectados.remove(electrodomestico);                                                 
         contador_electrodomesticos = electrodomesticosConectados.size();                                      
     }  
 
     
-    
+    /**
+     * Cambia el estado del interruptor general y actualiza el estado de todos los electrodomésticos conectados.
+     * 
+     * @return true si el interruptor general está cerrado después del cambio, false si está abierto.
+     */
     //Interruptor que enciendo o apaga el IG -->
     public boolean interruptorIG() {                                                                
         if (getEstadoInterruptorGeneral() == true) {                                             

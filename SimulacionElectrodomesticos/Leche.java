@@ -3,6 +3,10 @@ public class Leche extends Comida{
     private String marca = "Lider";
     private String cantidadRestante = "Llena";
     
+     /**
+     * Constructor de la clase Leche.
+     * Inicializa los atributos de la leche.
+     */
     public Leche(){
         super();
         this.nombre = "leche";
@@ -10,7 +14,11 @@ public class Leche extends Comida{
         this.peso = "1 Lt";
         this.precio = 1990.0f;
     }
-    //
+    /**
+     * Metodo que simula el acto de beber leche, disminuyendo la cantidad restante y actualizando el peso.
+     * 
+     * @return El peso actual de la leche despues de beber.
+     */
     public String beber(){
         switch(cantidadRestante){
             case "Llena":

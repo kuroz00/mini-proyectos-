@@ -2,6 +2,8 @@
 comment0.target=Pollo
 comment1.params=
 comment1.target=Pollo()
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Pollo.\r\n\ Inicializa\ las\ propiedades\ heredadas\ de\ la\ clase\ Comida\ y\ establece\ las\ propiedades\ espec\u00EDficas\ del\ pollo.\r\n
 comment2.params=
 comment2.target=java.lang.String\ cocinar()
+comment2.text=\r\n\ Cocina\ el\ pollo\ cambiando\ su\ estado\ de\ cocci\u00F3n\ de\ crudo\ a\ cocido.\r\n\r\n\ @return\ El\ estado\ de\ cocci\u00F3n\ actual\ del\ pollo\ despu\u00E9s\ de\ ser\ cocinado\ (cocido).\r\n
 numComments=3

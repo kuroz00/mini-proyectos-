@@ -1,11 +1,15 @@
 #BlueJ class context
 comment0.target=Comida
+comment0.text=\r\n\ Clase\ abstracta\ Comida\ que\ define\ las\ propiedades\ basicas\ de\ una\ comida.\r\n
 comment1.params=
 comment1.target=Comida()
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Comida.\r\n\ Inicializa\ la\ referencia\ al\ refrigerador.\r\n
 comment10.params=
 comment10.target=void\ guardarEnRefri()
+comment10.text=\r\n\ Guarda\ el\ item\ de\ comida\ en\ el\ refrigerador\ si\ no\ esta\ almacenado.\r\n
 comment11.params=
 comment11.target=void\ quitarDelRefri()
+comment11.text=\r\n\ Quita\ el\ item\ de\ comida\ del\ refrigerador\ si\ esta\ almacenado.\r\n
 comment2.params=
 comment2.target=java.lang.String\ getNombre()
 comment3.params=

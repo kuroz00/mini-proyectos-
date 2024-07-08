@@ -7,6 +7,10 @@ public class Refrigerador extends Electrodomestico{
     //Metodos 
     //Instancia del singleton
     private InterruptorGeneral obj;
+    /**
+     * Constructor de la clase Refrigerador.
+     * Inicializa el consumo electrico y el nombre del refrigerador.
+     */
     public Refrigerador() {
         super();  
         this.consumoElectrico = 500;
@@ -16,32 +20,15 @@ public class Refrigerador extends Electrodomestico{
     }
     
     private static Refrigerador refri = new Refrigerador();
+    /**
+     * Obtiene la instancia del singleton Refrigerador.
+     * 
+     * @return La instancia del refrigerador.
+     */
     public Refrigerador getRefri(){
         return refri;
     }
-    
-    /*
-    //GET --> ACCEDER al valor de un atributo
-    public boolean getEstadoElectrodomestico() {
-        return estadoElectrodomestico;
-    }
-    public boolean getConexion(){
-        return conexion;
-    }
-    public int getConsumoElectrico(){
-        return consumoElectrico;
-    }
-    //SET --> MODIFICAR el valor de un atributo
-    public boolean setEstadoElectrodomestico() {
-        return estadoElectrodomestico;
-    }
-    public boolean setConexion(){
-        return conexion;
-    }
-    public int setConsumoElectrico(){
-        return consumoElectrico;
-    }
-    */
+
     
      //Metodos propios de la clase
      //Get Set
@@ -49,7 +36,11 @@ public class Refrigerador extends Electrodomestico{
         return capacidadItems;    
     }
 
-     //Metodos Arreglo
+    /**
+     * Guarda un item de comida en el refrigerador si hay espacio disponible.
+     * 
+     * @param comida El item de comida a ser guardado en el refrigerador.
+     */
     public  void guardar (Comida comida){
         if(cantidadItems < capacidadItems){
             refrigeradorItems.add(comida);
@@ -58,6 +49,11 @@ public class Refrigerador extends Electrodomestico{
             System.out.println("Refrigerador lleno!"); //mensaje saltara por pantalla cuando se llene el refrigerador
         }
     }
+    /**
+     * Saca un item de comida del refrigerador si hay items presentes.
+     * 
+     * @param comida El item de comida a ser sacado del refrigerador.
+     */
     public void sacar(Comida comida){
         if(this.cantidadItems > 0){
             this.refrigeradorItems.remove(comida);

@@ -2,4 +2,11 @@
 comment0.target=Tostadora
 comment1.params=consumoElectrico
 comment1.target=Tostadora(int)
-numComments=2
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Tostadora.\r\n\ Inicializa\ el\ consumo\ electrico\ y\ el\ nombre\ de\ la\ tostadora.\r\n\ \r\n\ @param\ consumoElectrico\ El\ consumo\ electrico\ de\ la\ tostadora.\r\n
+comment2.params=pan
+comment2.target=void\ insertarPan(Pan)
+comment2.text=\r\n\ Inserta\ un\ pan\ en\ la\ tostadora.\r\n\ \r\n\ @param\ pan\ El\ pan\ a\ ser\ insertado\ en\ la\ tostadora.\r\n
+comment3.params=
+comment3.target=boolean\ tostar()
+comment3.text=\r\n\ Tosta\ el\ pan\ si\ la\ tostadora\ esta\ conectada,\ el\ interruptor\ general\ esta\ activado,\ y\ hay\ pan\ no\ tostado\ en\ la\ tostadora.\r\n\ \r\n\ @return\ true\ si\ el\ pan\ ha\ sido\ tostado,\ false\ en\ caso\ contrario.\r\n
+numComments=4

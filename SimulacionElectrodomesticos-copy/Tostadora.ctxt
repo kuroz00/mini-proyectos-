@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Tostadora
+comment1.params=consumoElectrico
+comment1.target=Tostadora(int)
+comment2.params=pan
+comment2.target=void\ insertarPan(Pan)
+comment3.params=
+comment3.target=boolean\ tostar()
+numComments=4

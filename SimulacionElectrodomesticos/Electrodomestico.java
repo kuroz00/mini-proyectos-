@@ -1,3 +1,7 @@
+/**
+ * La clase abstracta Electrodomestico define las propiedades y comportamientos comunes de todos los electrodomesticos.
+ * Incluye metodos para conectar, desconectar y cambiar el estado del interruptor de los electrodomesticos.
+ */
 public abstract class Electrodomestico { 
     //Instancia y atributos
     protected String nombre;
@@ -7,13 +11,15 @@ public abstract class Electrodomestico {
     protected boolean estadoElectrodomestico;
     
     
-    //Instancia del singleton
+    /**
+     * Constructor de la clase Electrodomestico.
+     * Inicializa la instancia del singleton InterruptorGeneral.
+     */
     private InterruptorGeneral obj;
     public Electrodomestico() {       
         InterruptorGeneral x = new InterruptorGeneral();
         obj = x.getSingleton();
     }
-    
     
     
     //GET --> ACCEDER al valor de un atributo
@@ -44,6 +50,10 @@ public abstract class Electrodomestico {
     }
     
     
+    /**
+     * Conecta el electrodomestico al interruptor general.
+     * Si el interruptor general está cerrado, el electrodomestico se enciende y su consumo eléctrico se suma al total.
+     */
     public void conectar() {                                                                        
         if (conexion == false){                                                                    
             obj.registrar(this);                                                                    
@@ -51,13 +61,17 @@ public abstract class Electrodomestico {
             if((obj.getEstadoInterruptorGeneral() == true) && (this.nombre == "refrigerador")){
                 obj.setConsumoElectrico(obj.getConsumoElectrico() + this.consumoElectrico);
                 setEstadoElectrodomestico(true);
-            } else if ((obj.getEstadoInterruptorGeneral() == true) && (getEstadoInterruptor() == true)){
+            } else if ((obj.getEstadoInterruptorGeneral() == true) && (getEstadoInterruptor() == true) && (this.nombre != "refrigerador")){
                 obj.setConsumoElectrico(obj.getConsumoElectrico() + this.consumoElectrico);
                 setEstadoElectrodomestico(true);
             }
 
         }                                                                                          
-    }                                                                
+    }            
+    /**
+     * Desconecta el electrodoméstico del interruptor general.
+     * Si el interruptor general está abierto, el consumo electrico del electrodomestico se resta del total y el electrodomestico se apaga.
+     */
     public void desconectar() {                       
         if (conexion == true){     
             obj.remover(this);
@@ -65,14 +79,21 @@ public abstract class Electrodomestico {
         if((obj.getEstadoInterruptorGeneral() == true) && ((this.nombre == "refrigerador"))){
                 obj.setConsumoElectrico(obj.getConsumoElectrico() - this.consumoElectrico);
                 setEstadoElectrodomestico(false);        
-            } else if ((obj.getEstadoInterruptorGeneral() == true) && (getEstadoInterruptor() == true)){
+            } else if ((obj.getEstadoInterruptorGeneral() == true) && (getEstadoInterruptor() == true) && (this.nombre != "refrigerador")){
                 obj.setConsumoElectrico(obj.getConsumoElectrico() - this.consumoElectrico);
                 setEstadoElectrodomestico(false);
             }
         }
     }     
     
-    public boolean INTERRUPTOR_ELECTRODOMESTICO(){
+    
+    /**
+     * Cambia el estado del interruptor del electrodomestico.
+     * Si el electrodoméstico está conectado y el interruptor general está cerrado, el consumo eléctrico se actualiza en base a la condicional correspondiente.
+     * 
+     * @return El nuevo estado del interruptor del electrodoméstico.
+     */
+    public boolean a_interruptorElectrodomestico(){
          if (conexion == true){                                 
             if (getEstadoInterruptor() == true){                
                 setEstadoInterruptor(false);
