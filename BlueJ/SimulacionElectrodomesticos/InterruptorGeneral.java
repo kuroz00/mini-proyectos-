@@ -10,8 +10,10 @@ public class InterruptorGeneral {
     private static ArrayList<Electrodomestico> electrodomesticosConectados = new ArrayList<>();
     
     private static boolean estadoInterruptorGeneral = false;
+    
     private static int contador_electrodomesticos = electrodomesticosConectados.size();
     private static int consumo_electrico;
+    private static int consumo_electrico_total; /// <---
     
     
     /**
@@ -25,7 +27,9 @@ public class InterruptorGeneral {
 
     
 
-    
+    public static int getConsumo_electrico_total(){
+        return consumo_electrico_total;
+    }
     public static int getContador() {
         return contador_electrodomesticos;
     }
@@ -36,6 +40,9 @@ public class InterruptorGeneral {
         return consumo_electrico;
     }
     //SET --> 
+    public static int setConsumo_electrico_total(int valor){
+    return consumo_electrico_total = valor;
+    }
     public static void setContador_electrodomesticos(int contador) { 
         InterruptorGeneral.contador_electrodomesticos = contador;
     }
@@ -98,6 +105,15 @@ public class InterruptorGeneral {
             } 
         }
         return estadoInterruptorGeneral;                                                           
-    }                                                                                               
+    } 
+    
+    /**
+     * Metodo para saber el consumo electrico total de los electrodomesticos enchufados.
+     */
+    public void a_informacionConsumo(){
+        System.out.println("Electrodomesticos conectados: " + contador_electrodomesticos);
+        System.out.println("Consumo electrico actual: " + consumo_electrico);
+        System.out.println("Consumo electrico total: " + consumo_electrico_total);
+    }
 
 }

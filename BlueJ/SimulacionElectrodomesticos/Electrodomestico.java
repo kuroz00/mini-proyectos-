@@ -56,7 +56,8 @@ public abstract class Electrodomestico {
      */
     public void conectar() {                                                                        
         if (conexion == false){                                                                    
-            obj.registrar(this);                                                                    
+            obj.registrar(this);
+            obj.setConsumo_electrico_total(obj.getConsumo_electrico_total() + this.consumoElectrico); //<--
             conexion = true;                                                                        
             if((obj.getEstadoInterruptorGeneral() == true) && (this.nombre == "refrigerador")){
                 obj.setConsumoElectrico(obj.getConsumoElectrico() + this.consumoElectrico);
@@ -76,6 +77,7 @@ public abstract class Electrodomestico {
         if (conexion == true){     
             obj.remover(this);
             conexion = false;
+            obj.setConsumo_electrico_total(obj.getConsumo_electrico_total() - this.consumoElectrico); // <--
         if((obj.getEstadoInterruptorGeneral() == true) && ((this.nombre == "refrigerador"))){
                 obj.setConsumoElectrico(obj.getConsumoElectrico() - this.consumoElectrico);
                 setEstadoElectrodomestico(false);        
